@@ -1,0 +1,155 @@
+[gd_scene load_steps=7 format=3 uid="uid://beymwt71ht8yj"]
+
+[ext_resource type="PackedScene" uid="uid://bklk8jur0o7yq" path="res://LevelBackgrounds/DecorSpiral.tscn" id="1_f65t7"]
+
+[sub_resource type="Animation" id="Animation_f65t7"]
+resource_name = "Anim01"
+length = 8.0
+loop_mode = 1
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mountain1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 4, 7),
+"transitions": PackedFloat32Array(-2, -2, -2, -2),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 60), Vector2(0, 60), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mountain2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.0100002, 4.01, 5.01, 8),
+"transitions": PackedFloat32Array(-2, -2, -2, -2),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -30), Vector2(0, -30), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mountain4:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2, 3, 6, 7),
+"transitions": PackedFloat32Array(-2, -2, -2, -2),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(0, -30), Vector2(0, -30)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Mountain3:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1, 2, 5, 6),
+"transitions": PackedFloat32Array(-2, -2, -2, -2),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(0, 60), Vector2(0, 60)]
+}
+
+[sub_resource type="Animation" id="Animation_e2hkq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mountain1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mountain2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mountain4:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Mountain3:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e2hkq"]
+_data = {
+&"Anim01": SubResource("Animation_f65t7"),
+&"RESET": SubResource("Animation_e2hkq")
+}
+
+[sub_resource type="Gradient" id="Gradient_t2omd"]
+colors = PackedColorArray(0.84313726, 0.84313726, 0.5882354, 1, 0.5882354, 0.627451, 0.43137255, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_lk57h"]
+gradient = SubResource("Gradient_t2omd")
+width = 1200
+height = 700
+fill_to = Vector2(0, 1)
+
+[node name="Background01" type="Node2D"]
+
+[node name="Anim01" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_e2hkq")
+}
+autoplay = "Anim01"
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(600, 350)
+texture = SubResource("GradientTexture2D_lk57h")
+
+[node name="DecorSpiral" parent="." instance=ExtResource("1_f65t7")]
+modulate = Color(0.50980395, 0.5686275, 0.27450982, 0.7529412)
+position = Vector2(600, 350)
+
+[node name="Mountain1" type="Polygon2D" parent="."]
+color = Color(0.39215687, 0.4509804, 0.19607842, 0.2509804)
+polygon = PackedVector2Array(40, 400, 300, 740, -220, 740)
+
+[node name="Mountain2" type="Polygon2D" parent="."]
+color = Color(0.39215687, 0.4509804, 0.19607842, 0.2509804)
+polygon = PackedVector2Array(260, 540, 100, 740, 420, 740)
+
+[node name="Mountain3" type="Polygon2D" parent="."]
+color = Color(0.39215687, 0.4509804, 0.19607842, 0.2509804)
+polygon = PackedVector2Array(1160, 400, 900, 740, 1420, 740)
+
+[node name="Mountain4" type="Polygon2D" parent="."]
+color = Color(0.39215687, 0.4509804, 0.19607842, 0.2509804)
+polygon = PackedVector2Array(940, 540, 1100, 740, 780, 740)

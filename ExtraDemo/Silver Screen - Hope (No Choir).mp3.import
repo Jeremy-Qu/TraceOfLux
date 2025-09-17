@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://be1beccbn4nb"
+path="res://.godot/imported/Silver Screen - Hope (No Choir).mp3-5d4497395be8824d7d2a40289621db17.mp3str"
+
+[deps]
+
+source_file="res://ExtraDemo/Silver Screen - Hope (No Choir).mp3"
+dest_files=["res://.godot/imported/Silver Screen - Hope (No Choir).mp3-5d4497395be8824d7d2a40289621db17.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

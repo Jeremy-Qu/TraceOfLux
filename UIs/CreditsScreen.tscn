@@ -1,0 +1,410 @@
+[gd_scene load_steps=9 format=3 uid="uid://dbhf1qnw7imsq"]
+
+[ext_resource type="Script" uid="uid://ba5kknexun8if" path="res://UIs/credits_screen.gd" id="1_1uv0e"]
+[ext_resource type="PackedScene" uid="uid://yhufgkjkt5mx" path="res://LevelBackgrounds/MenuBackground.tscn" id="2_abij2"]
+[ext_resource type="LabelSettings" uid="uid://c52tjpj8rupor" path="res://UIs/CreditsLargeFont.tres" id="2_ls0o2"]
+[ext_resource type="LabelSettings" uid="uid://cgbktininvus2" path="res://UIs/CreditsSmallFont.tres" id="3_abij2"]
+
+[sub_resource type="Animation" id="Animation_1uv0e"]
+resource_name = "AnimCreditsFadeIn"
+length = 1.6
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5, 0.8),
+"transitions": PackedFloat32Array(0.5, -2),
+"update": 0,
+"values": [Vector2(0, 70), Vector2(0, 30)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label1:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5, 0.8),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LabelAuthor:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.7, 1),
+"transitions": PackedFloat32Array(0.5, -2),
+"update": 0,
+"values": [Vector2(0, 135), Vector2(0, 95)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("LabelAuthor:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.7, 1),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Label2:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.9, 1.1959612),
+"transitions": PackedFloat32Array(0.5, -2),
+"update": 0,
+"values": [Vector2(110, 245), Vector2(110, 205)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Label2:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.9, 1.2),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Label3:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1.1, 1.3959613),
+"transitions": PackedFloat32Array(0.5, -2),
+"update": 0,
+"values": [Vector2(110, 393), Vector2(110, 353)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Label3:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(1.1, 1.4),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Label4:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(1.3, 1.5959613),
+"transitions": PackedFloat32Array(0.5, -2),
+"update": 0,
+"values": [Vector2(110, 570), Vector2(110, 530)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Label4:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(1.3, 1.6),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_gkk7f"]
+resource_name = "AnimCreditsFadeOut"
+length = 0.5
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ls0o2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 30)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label1:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LabelAuthor:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 95)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Label2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(110, 205)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Label3:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(110, 353)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Label4:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(110, 530)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("LabelAuthor:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Label2:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Label3:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Label4:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_abij2"]
+_data = {
+&"AnimCreditsFadeIn": SubResource("Animation_1uv0e"),
+&"AnimCreditsFadeOut": SubResource("Animation_gkk7f"),
+&"RESET": SubResource("Animation_ls0o2")
+}
+
+[node name="CreditsScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1uv0e")
+
+[node name="MenuBackground" parent="." instance=ExtResource("2_abij2")]
+
+[node name="AnimCreditsUI" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_abij2")
+}
+
+[node name="Label1" type="Label" parent="."]
+custom_minimum_size = Vector2(1200, 0)
+layout_mode = 0
+offset_top = 30.0
+offset_right = 1200.0
+offset_bottom = 108.000046
+text = "A Game by"
+label_settings = ExtResource("3_abij2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelAuthor" type="Label" parent="."]
+custom_minimum_size = Vector2(1200, 0)
+layout_mode = 0
+offset_top = 95.0
+offset_right = 1200.0
+offset_bottom = 186.00009
+text = "G.R. & J.E.M."
+label_settings = ExtResource("2_ls0o2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 0
+offset_left = 110.0
+offset_top = 205.0
+offset_right = 1110.0
+offset_bottom = 349.00003
+text = "After clearing all the levels, you’re welcome to submit 
+your score to us directly or via our dedicated website. 
+We’ll update the Hall of Fame regularly in the future."
+label_settings = ExtResource("3_abij2")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="."]
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 0
+offset_left = 110.0
+offset_top = 353.0
+offset_right = 1110.0
+offset_bottom = 546.00037
+text = "This game is totally free and fully open-source.
+We encourage your improvements and fanmade creations. 
+You may monetize your works as long as you properly credit our original game."
+label_settings = ExtResource("3_abij2")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label4" type="Label" parent="."]
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 0
+offset_left = 110.0
+offset_top = 530.0
+offset_right = 1110.0
+offset_bottom = 674.0
+text = "More updates will follow as development progresses. 
+ENJOY and STAY TUNED! :-)"
+label_settings = ExtResource("3_abij2")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Back" type="Node2D" parent="."]
+position = Vector2(20, 20)
+
+[node name="ButtonShape" type="Polygon2D" parent="Back"]
+position = Vector2(40, 40)
+color = Color(0.6, 0.6, 0.6, 0.5019608)
+polygon = PackedVector2Array(0, -40, -40, 0, 0, 40, 40, 0)
+
+[node name="IconShape" type="Polygon2D" parent="Back"]
+position = Vector2(100, 15)
+offset = Vector2(-60, 25)
+polygon = PackedVector2Array(-5, -20, -25, 0, -5, 20, -5, 5, 20, 5, 25, 0, 20, -5, -5, -5)
+
+[node name="ButtonBack" type="Button" parent="Back"]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 46.96699
+offset_top = 46.819817
+offset_right = 102.966995
+offset_bottom = 102.81982
+rotation = 0.7853982
+pivot_offset = Vector2(53.03302, -31.81981)
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Back/ButtonBack" to="." method="_on_button_back_pressed"]

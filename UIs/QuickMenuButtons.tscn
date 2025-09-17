@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=3 uid="uid://srxpvfmxx5lq"]
+
+[ext_resource type="Script" uid="uid://pgsdilltbt3a" path="res://UIs/quick_menu_buttons.gd" id="1_paruf"]
+
+[node name="QuickMenuButtons" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_paruf")
+
+[node name="Back" type="Node2D" parent="."]
+
+[node name="ButtonShape" type="Polygon2D" parent="Back"]
+position = Vector2(40, 40)
+color = Color(0.6, 0.6, 0.6, 0.5019608)
+polygon = PackedVector2Array(0, -40, -40, 0, 0, 40, 40, 0)
+
+[node name="IconShape" type="Polygon2D" parent="Back"]
+position = Vector2(100, 15)
+offset = Vector2(-60, 25)
+polygon = PackedVector2Array(-5, -20, -25, 0, -5, 20, -5, 5, 20, 5, 25, 0, 20, -5, -5, -5)
+
+[node name="ButtonBack" type="Button" parent="Back"]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 46.96699
+offset_top = 46.819817
+offset_right = 102.966995
+offset_bottom = 102.81982
+rotation = 0.7853982
+pivot_offset = Vector2(53.03302, -31.81981)
+metadata/_edit_use_anchors_ = true
+
+[node name="Restart" type="Node2D" parent="."]
+
+[node name="ButtonShape" type="Polygon2D" parent="Restart"]
+position = Vector2(140, 40)
+color = Color(0.6, 0.6, 0.6, 0.5019608)
+polygon = PackedVector2Array(0, -40, -40, 0, 0, 40, 40, 0)
+
+[node name="IconShape" type="Polygon2D" parent="Restart"]
+position = Vector2(140, 40)
+polygon = PackedVector2Array(0, -25, -25, 0, -5, 20, -10, 25, 5, 25, 5, 10, 0, 15, -15, 0, 0, -15, 15, 0, 10, 5, 10, 10, 15, 10, 25, 0)
+
+[node name="ButtonRestart" type="Button" parent="Restart"]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 140.0
+offset_right = 196.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.7853982
+
+[connection signal="pressed" from="Back/ButtonBack" to="." method="_on_button_back_pressed"]
+[connection signal="pressed" from="Restart/ButtonRestart" to="." method="_on_button_restart_pressed"]

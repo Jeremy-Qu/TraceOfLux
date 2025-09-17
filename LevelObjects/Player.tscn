@@ -1,0 +1,251 @@
+[gd_scene load_steps=7 format=3 uid="uid://b011xteb3u2by"]
+
+[ext_resource type="Script" uid="uid://cfh6qcbthnwt7" path="res://LevelObjects/player.gd" id="1_xhfnw"]
+[ext_resource type="PackedScene" uid="uid://bg32jirdcmxka" path="res://LevelObjects/PlayerTrail.tscn" id="2_sf7l6"]
+
+[sub_resource type="Animation" id="Animation_xhfnw"]
+resource_name = "PlayerGlowing"
+length = 9.0
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerSprite/Glow4:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4.5),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [0.0, 4.71238898038469]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PlayerSprite/Glow4:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3, 6),
+"transitions": PackedFloat32Array(0.5, -0.5, 0.5),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.3, 1.3), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PlayerSprite/Glow3:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 5.5),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [0.0, -4.71238898038469]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PlayerSprite/Glow3:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1, 4, 7),
+"transitions": PackedFloat32Array(0.5, -0.5, 0.5),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.3, 1.3), Vector2(0.9, 0.9)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PlayerSprite/Glow2:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2, 6.5),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [0.0, 4.71238898038469]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PlayerSprite/Glow2:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(2, 5, 8),
+"transitions": PackedFloat32Array(0.5, -0.5, 0.5),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.3, 1.3), Vector2(0.9, 0.9)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("PlayerSprite/Glow1:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(3, 7.5),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [0.0, -4.71238898038469]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("PlayerSprite/Glow1:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(3, 6, 9),
+"transitions": PackedFloat32Array(0.5, -0.5, 0.5),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.3, 1.3), Vector2(0.8, 0.8)]
+}
+
+[sub_resource type="Animation" id="Animation_0rwas"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerSprite/Glow4:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PlayerSprite/Glow4:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PlayerSprite/Glow3:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PlayerSprite/Glow3:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PlayerSprite/Glow2:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PlayerSprite/Glow1:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("PlayerSprite/Glow2:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("PlayerSprite/Glow1:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kpjcp"]
+_data = {
+&"PlayerGlowing": SubResource("Animation_xhfnw"),
+&"RESET": SubResource("Animation_0rwas")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0rwas"]
+
+[node name="Player" type="Area2D"]
+script = ExtResource("1_xhfnw")
+
+[node name="PlayerAnim" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_kpjcp")
+}
+autoplay = "PlayerGlowing"
+
+[node name="PlayerSprite" type="Node2D" parent="."]
+
+[node name="PlayerTrail" parent="PlayerSprite" instance=ExtResource("2_sf7l6")]
+
+[node name="Glow1" type="Polygon2D" parent="PlayerSprite"]
+antialiased = true
+polygon = PackedVector2Array(-10, -10, -10, 10, 10, 10, 10, -10)
+
+[node name="Glow2" type="Polygon2D" parent="PlayerSprite"]
+color = Color(1, 1, 1, 0.5019608)
+antialiased = true
+polygon = PackedVector2Array(0, -20, -20, 0, 0, 20, 20, 0)
+
+[node name="Glow3" type="Polygon2D" parent="PlayerSprite"]
+color = Color(1, 1, 1, 0.5019608)
+antialiased = true
+polygon = PackedVector2Array(-20, -20, -20, 20, 20, 20, 20, -20)
+
+[node name="Glow4" type="Polygon2D" parent="PlayerSprite"]
+color = Color(1, 1, 1, 0.5019608)
+antialiased = true
+polygon = PackedVector2Array(0, -40, -40, 0, 0, 40, 40, 0)
+
+[node name="PlayerCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_0rwas")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

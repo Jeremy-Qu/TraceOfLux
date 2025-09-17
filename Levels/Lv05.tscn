@@ -1,0 +1,237 @@
+[gd_scene load_steps=15 format=3 uid="uid://bq12asc2wafor"]
+
+[ext_resource type="Script" uid="uid://bq3u0wffm44w0" path="res://Levels/level_base.gd" id="1_sscfa"]
+[ext_resource type="PackedScene" uid="uid://beymwt71ht8yj" path="res://LevelBackgrounds/Background01.tscn" id="2_sc7qu"]
+[ext_resource type="PackedScene" uid="uid://36pv1c0ja0xk" path="res://LevelObjects/Pathway.tscn" id="3_607h7"]
+[ext_resource type="PackedScene" uid="uid://ckynr4rccygs" path="res://LevelObjects/Waypoint.tscn" id="5_m0pbb"]
+[ext_resource type="PackedScene" uid="uid://cbe1ljmhkv464" path="res://LevelObjects/Goal.tscn" id="6_3r5xf"]
+[ext_resource type="PackedScene" uid="uid://b011xteb3u2by" path="res://LevelObjects/Player.tscn" id="7_flh2b"]
+[ext_resource type="PackedScene" uid="uid://srxpvfmxx5lq" path="res://UIs/QuickMenuButtons.tscn" id="8_y0sy2"]
+
+[sub_resource type="Animation" id="Animation_qg80s"]
+resource_name = "AnimLevelFadeIn"
+length = 0.5
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_pksqe"]
+resource_name = "AnimLevelFadeOut"
+length = 0.5
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ds5lt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pksqe"]
+_data = {
+&"AnimLevelFadeIn": SubResource("Animation_qg80s"),
+&"AnimLevelFadeOut": SubResource("Animation_pksqe"),
+&"RESET": SubResource("Animation_ds5lt")
+}
+
+[sub_resource type="Animation" id="Animation_wm5us"]
+resource_name = "AnimDynamics"
+length = 4.0
+loop_mode = 1
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Pathway1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 2, 2.5, 4),
+"transitions": PackedFloat32Array(-2, -2, -2, -2),
+"update": 0,
+"values": [Vector2(520, 190), Vector2(680, 190), Vector2(680, 190), Vector2(520, 190)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Pathway3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5, 2, 2.5, 4),
+"transitions": PackedFloat32Array(-2, -2, -2, -2),
+"update": 0,
+"values": [Vector2(680, 350), Vector2(520, 350), Vector2(520, 350), Vector2(680, 350)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Pathway5:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5, 2, 2.5, 4),
+"transitions": PackedFloat32Array(-2, -2, -2, -2),
+"update": 0,
+"values": [Vector2(520, 510), Vector2(680, 510), Vector2(680, 510), Vector2(520, 510)]
+}
+
+[sub_resource type="Animation" id="Animation_sscfa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Pathway1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(520, 190)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Pathway3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(680, 350)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Pathway5:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(520, 510)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sscfa"]
+_data = {
+&"AnimDynamics": SubResource("Animation_wm5us"),
+&"RESET": SubResource("Animation_sscfa")
+}
+
+[node name="LevelRootNode" type="Node2D"]
+script = ExtResource("1_sscfa")
+
+[node name="AnimLevelUI" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_pksqe")
+}
+
+[node name="AnimLevelDynamics" type="AnimationPlayer" parent="."]
+root_node = NodePath("../AnimLevelUI")
+libraries = {
+&"": SubResource("AnimationLibrary_sscfa")
+}
+autoplay = "AnimDynamics"
+
+[node name="Background01" parent="." instance=ExtResource("2_sc7qu")]
+
+[node name="Pathway1" parent="." groups=["GroupPlatforms"] instance=ExtResource("3_607h7")]
+modulate = Color(0.43137255, 0.50980395, 0.1764706, 0.5019608)
+position = Vector2(520, 190)
+
+[node name="Pathway2" parent="." groups=["GroupPlatforms"] instance=ExtResource("3_607h7")]
+modulate = Color(0.43137255, 0.50980395, 0.1764706, 0.5019608)
+position = Vector2(760, 270)
+rotation = 1.5707964
+
+[node name="Pathway3" parent="." groups=["GroupPlatforms"] instance=ExtResource("3_607h7")]
+modulate = Color(0.43137255, 0.50980395, 0.1764706, 0.5019608)
+position = Vector2(680, 350)
+
+[node name="Pathway4" parent="." groups=["GroupPlatforms"] instance=ExtResource("3_607h7")]
+modulate = Color(0.43137255, 0.50980395, 0.1764706, 0.5019608)
+position = Vector2(440, 430)
+rotation = 1.5707964
+
+[node name="Pathway5" parent="." groups=["GroupPlatforms"] instance=ExtResource("3_607h7")]
+modulate = Color(0.43137255, 0.50980395, 0.1764706, 0.5019608)
+position = Vector2(520, 510)
+
+[node name="Waypoint1" parent="." groups=["GroupPlatforms", "GroupWaypoints"] instance=ExtResource("5_m0pbb")]
+modulate = Color(0.43137255, 0.50980395, 0.25490198, 1)
+position = Vector2(440, 190)
+
+[node name="Waypoint2" parent="." groups=["GroupPlatforms", "GroupWaypoints"] instance=ExtResource("5_m0pbb")]
+modulate = Color(0.43137255, 0.50980395, 0.25490198, 1)
+position = Vector2(600, 190)
+
+[node name="Waypoint3" parent="." groups=["GroupPlatforms", "GroupWaypoints"] instance=ExtResource("5_m0pbb")]
+modulate = Color(0.43137255, 0.50980395, 0.25490198, 1)
+position = Vector2(760, 190)
+
+[node name="Waypoint4" parent="." groups=["GroupPlatforms", "GroupWaypoints"] instance=ExtResource("5_m0pbb")]
+modulate = Color(0.43137255, 0.50980395, 0.25490198, 1)
+position = Vector2(760, 350)
+
+[node name="Waypoint5" parent="." groups=["GroupPlatforms", "GroupWaypoints"] instance=ExtResource("5_m0pbb")]
+modulate = Color(0.43137255, 0.50980395, 0.25490198, 1)
+position = Vector2(600, 350)
+
+[node name="Waypoint6" parent="." groups=["GroupPlatforms", "GroupWaypoints"] instance=ExtResource("5_m0pbb")]
+modulate = Color(0.43137255, 0.50980395, 0.25490198, 1)
+position = Vector2(440, 350)
+
+[node name="Waypoint7" parent="." groups=["GroupPlatforms", "GroupWaypoints"] instance=ExtResource("5_m0pbb")]
+modulate = Color(0.43137255, 0.50980395, 0.25490198, 1)
+position = Vector2(440, 510)
+
+[node name="Waypoint8" parent="." groups=["GroupPlatforms", "GroupWaypoints"] instance=ExtResource("5_m0pbb")]
+modulate = Color(0.43137255, 0.50980395, 0.25490198, 1)
+position = Vector2(760, 510)
+
+[node name="Goal" parent="." groups=["GroupGoal", "GroupPlatforms", "GroupWaypoints"] instance=ExtResource("6_3r5xf")]
+modulate = Color(0.43137255, 0.50980395, 0.25490198, 1)
+position = Vector2(600, 510)
+
+[node name="Player" parent="." groups=["GroupPlayer"] instance=ExtResource("7_flh2b")]
+modulate = Color(1, 1, 0.8, 1)
+position = Vector2(600, 190)
+
+[node name="QuickMenuButtons" parent="." instance=ExtResource("8_y0sy2")]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 20.0
+offset_bottom = 20.0

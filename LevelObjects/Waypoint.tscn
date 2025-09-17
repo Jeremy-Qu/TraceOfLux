@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckynr4rccygs"]
+
+[ext_resource type="Script" uid="uid://bby85tkikxnud" path="res://LevelObjects/waypoint.gd" id="1_f1vko"]
+
+[node name="Waypoint" type="Area2D"]
+script = ExtResource("1_f1vko")
+
+[node name="PointShape" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(0, -30, -30, 0, 0, 30, 30, 0)
+uv = PackedVector2Array(18, -37, -8, -1, 35, 17, 54, -4)
+
+[node name="PointButton" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -40.0
+offset_right = 40.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.7853982
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(40, 40)
+metadata/_edit_use_anchors_ = true
+
+[node name="PointCollision" type="CollisionPolygon2D" parent="."]
+position = Vector2(-160, 10)
+polygon = PackedVector2Array(160, -40, 130, -10, 160, 20, 190, -10)
+
+[connection signal="pressed" from="PointButton" to="." method="_on_point_button_pressed"]

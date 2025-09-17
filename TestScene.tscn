@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://0j0nrthum74l"]
+
+[ext_resource type="PackedScene" uid="uid://b011xteb3u2by" path="res://LevelObjects/Player.tscn" id="1_mncer"]
+[ext_resource type="Script" uid="uid://coyt7wjt818at" path="res://test_scene.gd" id="1_wicfy"]
+[ext_resource type="PackedScene" uid="uid://ckynr4rccygs" path="res://LevelObjects/Waypoint.tscn" id="2_cguwc"]
+[ext_resource type="PackedScene" uid="uid://36pv1c0ja0xk" path="res://LevelObjects/Pathway.tscn" id="2_go42g"]
+[ext_resource type="PackedScene" uid="uid://cbe1ljmhkv464" path="res://LevelObjects/Goal.tscn" id="5_sreuk"]
+[ext_resource type="PackedScene" uid="uid://srxpvfmxx5lq" path="res://UIs/QuickMenuButtons.tscn" id="6_tq6uv"]
+
+[node name="TestScene" type="Node2D"]
+script = ExtResource("1_wicfy")
+
+[node name="Pathway1" parent="." groups=["GroupPlatforms"] instance=ExtResource("2_go42g")]
+position = Vector2(480, 80)
+
+[node name="Pathway2" parent="." groups=["GroupPlatforms"] instance=ExtResource("2_go42g")]
+position = Vector2(480, 240)
+
+[node name="Pathway3" parent="." groups=["GroupPlatforms"] instance=ExtResource("2_go42g")]
+position = Vector2(560, 160)
+rotation = 1.5707964
+
+[node name="Pathway4" parent="." groups=["GroupPlatforms"] instance=ExtResource("2_go42g")]
+position = Vector2(640, 80)
+
+[node name="Waypoint1" parent="." groups=["GroupPlatforms", "GroupWaypoints"] instance=ExtResource("2_cguwc")]
+position = Vector2(400, 80)
+
+[node name="Waypoint2" parent="." groups=["GroupPlatforms", "GroupWaypoints"] instance=ExtResource("2_cguwc")]
+position = Vector2(560, 240)
+
+[node name="Waypoint3" parent="." groups=["GroupPlatforms", "GroupWaypoints"] instance=ExtResource("2_cguwc")]
+position = Vector2(715, 80)
+
+[node name="Waypoint4" parent="." groups=["GroupPlatforms", "GroupWaypoints"] instance=ExtResource("2_cguwc")]
+position = Vector2(560, 80)
+
+[node name="Player" parent="." groups=["GroupPlayer"] instance=ExtResource("1_mncer")]
+position = Vector2(400, 80)
+scale = Vector2(0.8, 0.8)
+
+[node name="Player2" parent="." groups=["GroupPlayer"] instance=ExtResource("1_mncer")]
+position = Vector2(560, 80)
+scale = Vector2(0.8, 0.8)
+
+[node name="Goal" parent="." groups=["GroupGoal", "GroupPlatforms", "GroupWaypoints"] instance=ExtResource("5_sreuk")]
+position = Vector2(400, 240)
+
+[node name="QuickMenuButtons" parent="." instance=ExtResource("6_tq6uv")]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 20.0
+offset_bottom = 20.0

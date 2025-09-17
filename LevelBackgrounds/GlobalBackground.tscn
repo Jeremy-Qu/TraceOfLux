@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://busfhk6m8kqyj"]
+
+[node name="GlobalBackground" type="Node2D"]
+
+[node name="Transition" type="ColorRect" parent="."]
+offset_right = 1200.0
+offset_bottom = 700.0
+color = Color(0.92099476, 0.9209946, 0.9209946, 1)

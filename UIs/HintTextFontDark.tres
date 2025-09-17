@@ -1,0 +1,13 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://bv7yk4hs4qcsw"]
+
+[ext_resource type="FontFile" uid="uid://by3bpe1d4kglu" path="res://UIs/Asimovian-Regular.ttf" id="1_jqkff"]
+
+[resource]
+line_spacing = 0.0
+font = ExtResource("1_jqkff")
+font_size = 40
+font_color = Color(0.5019608, 0.5019608, 0.5019608, 0.7529412)
+outline_color = Color(0.5019608, 0.5019608, 0.5019608, 0.5019608)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 0.2509804)
+shadow_offset = Vector2(0, 0)

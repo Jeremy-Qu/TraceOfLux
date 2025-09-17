@@ -1,0 +1,337 @@
+[gd_scene load_steps=6 format=3 uid="uid://bflrrs7yhrhb4"]
+
+[ext_resource type="Script" uid="uid://xj6me1engl8a" path="res://LevelObjects/icy_path.gd" id="1_fc4de"]
+
+[sub_resource type="Animation" id="Animation_fc4de"]
+resource_name = "Collapse"
+length = 0.4
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IcyPathShape/IcyPathShape1:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.4),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.8, 0.8)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("IcyPathShape/IcyPathShape2:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 0.4),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.8, 0.8)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("IcyPathShape/IcyPathShape3:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1, 0.4),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.8, 0.8)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("IcyPathShape/IcyPathShape1:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-10, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("IcyPathShape/IcyPathShape3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(10, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("IcyPathShape/IcyPathShape1:color")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.1, 0.4),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("IcyPathShape/IcyPathShape2:color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.1, 0.4),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("IcyPathShape/IcyPathShape3:color")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.1, 0.4),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("IcyPathShape/IcyPathShape1:polygon")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(0.5, 0.5, 1),
+"update": 0,
+"values": [PackedVector2Array(-80, -15, -95, 0, -80, 15, -30, 15, -30, 0, -45, -15), PackedVector2Array(-80, -15, -95, 0, -80, 15, -30, 15, -30, 15, -55, -15), PackedVector2Array(-80, -15, -95, 0, -80, 15, -40, 15, -40, 15, -65, -15)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("IcyPathShape/IcyPathShape2:polygon")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(0.5, 0.5, 1),
+"update": 0,
+"values": [PackedVector2Array(-35, -15, -30, 0, -30, 15, 25, 15, 30, 0, 30, -15), PackedVector2Array(-35, -15, -30, 15, -30, 15, 20, 15, 30, -15, 30, -15), PackedVector2Array(-20, -15, -15, 15, -15, 15, 10, 15, 20, -15, 20, -15)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("IcyPathShape/IcyPathShape3:polygon")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(0.5, 0.5, 1),
+"update": 0,
+"values": [PackedVector2Array(30, -15, 30, 0, 35, 15, 80, 15, 95, 0, 80, -15), PackedVector2Array(30, -15, 30, -15, 45, 15, 80, 15, 95, 0, 80, -15), PackedVector2Array(45, -15, 45, -15, 60, 15, 80, 15, 95, 0, 80, -15)]
+}
+
+[sub_resource type="Animation" id="Animation_vf68t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IcyPathShape/IcyPathShape1:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("IcyPathShape/IcyPathShape1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("IcyPathShape/IcyPathShape2:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("IcyPathShape/IcyPathShape3:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("IcyPathShape/IcyPathShape3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("IcyPathShape:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("IcyPathShape/IcyPathShape1:color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("IcyPathShape/IcyPathShape2:color")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("IcyPathShape/IcyPathShape3:color")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("IcyPathShape/IcyPathShape1:polygon")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [PackedVector2Array(-80, -15, -95, 0, -80, 15, -30, 15, -30, 0, -45, -15)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("IcyPathShape/IcyPathShape2:polygon")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [PackedVector2Array(-35, -15, -30, 0, -30, 15, 25, 15, 30, 0, 30, -15)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("IcyPathShape/IcyPathShape3:polygon")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [PackedVector2Array(30, -15, 30, 0, 35, 15, 80, 15, 95, 0, 80, -15)]
+}
+
+[sub_resource type="Animation" id="Animation_pb2gg"]
+resource_name = "Warning"
+length = 0.15
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("IcyPathShape:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15),
+"transitions": PackedFloat32Array(-0.5, -0.5, -0.5, -0.5),
+"update": 0,
+"values": [0.0, 0.05235987755982989, -0.05235987755982989, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pb2gg"]
+_data = {
+&"Collapse": SubResource("Animation_fc4de"),
+&"RESET": SubResource("Animation_vf68t"),
+&"Warning": SubResource("Animation_pb2gg")
+}
+
+[node name="IcyPath" type="Area2D"]
+script = ExtResource("1_fc4de")
+
+[node name="AnimIcyPath" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_pb2gg")
+}
+
+[node name="IcyPathShape" type="Node2D" parent="."]
+
+[node name="IcyPathShape1" type="Polygon2D" parent="IcyPathShape"]
+polygon = PackedVector2Array(-80, -15, -95, 0, -80, 15, -30, 15, -30, 0, -45, -15)
+
+[node name="IcyPathShape2" type="Polygon2D" parent="IcyPathShape"]
+polygon = PackedVector2Array(-35, -15, -30, 0, -30, 15, 25, 15, 30, 0, 30, -15)
+
+[node name="IcyPathShape3" type="Polygon2D" parent="IcyPathShape"]
+polygon = PackedVector2Array(30, -15, 30, 0, 35, 15, 80, 15, 95, 0, 80, -15)
+
+[node name="IcyPathCollision" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(-65, -15, -50, 0, -65, 15, 65, 15, 50, 0, 65, -15)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

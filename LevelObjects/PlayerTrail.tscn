@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=3 uid="uid://bg32jirdcmxka"]
+
+[ext_resource type="Script" uid="uid://ch3bxmg232n3k" path="res://LevelObjects/player_trail.gd" id="1_galho"]
+
+[sub_resource type="Curve" id="Curve_2o1hw"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_v63vy"]
+offsets = PackedFloat32Array(0, 0.8)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1)
+metadata/_snap_enabled = true
+
+[sub_resource type="Animation" id="Animation_2o1hw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_galho"]
+resource_name = "TrailDisappear"
+length = 0.2
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v63vy"]
+_data = {
+&"RESET": SubResource("Animation_2o1hw"),
+&"TrailDisappear": SubResource("Animation_galho")
+}
+
+[node name="PlayerTrail" type="Line2D"]
+top_level = true
+z_as_relative = false
+points = PackedVector2Array(-60, 0, 0, 0)
+width = 20.0
+width_curve = SubResource("Curve_2o1hw")
+default_color = Color(1, 1, 1, 0.5019608)
+gradient = SubResource("Gradient_v63vy")
+begin_cap_mode = 1
+antialiased = true
+script = ExtResource("1_galho")
+
+[node name="AnimTrail" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_v63vy")
+}

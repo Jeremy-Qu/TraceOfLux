@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://bygl2vktk2tro"]
+
+[ext_resource type="PackedScene" uid="uid://bklk8jur0o7yq" path="res://LevelBackgrounds/DecorSpiral.tscn" id="1_a7xgc"]
+
+[sub_resource type="Animation" id="Animation_e2hkq"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_jgf44"]
+resource_name = "Anim03"
+length = 8.0
+step = 1.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e2hkq"]
+_data = {
+&"Anim03": SubResource("Animation_jgf44"),
+&"RESET": SubResource("Animation_e2hkq")
+}
+
+[sub_resource type="Gradient" id="Gradient_t2omd"]
+colors = PackedColorArray(0.019607844, 0.07843137, 0.25490198, 1, 0.019607844, 0.019607844, 0.09803922, 1)
+metadata/_snap_enabled = true
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_lk57h"]
+gradient = SubResource("Gradient_t2omd")
+width = 1200
+height = 700
+fill_to = Vector2(0, 1)
+
+[node name="Background03" type="Node2D"]
+
+[node name="Anim03" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_e2hkq")
+}
+autoplay = "Anim03"
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(600, 350)
+texture = SubResource("GradientTexture2D_lk57h")
+
+[node name="DecorSpiral" parent="." instance=ExtResource("1_a7xgc")]
+modulate = Color(0.19607842, 0.13725491, 0.4509804, 0.7529412)
+position = Vector2(600, 350)

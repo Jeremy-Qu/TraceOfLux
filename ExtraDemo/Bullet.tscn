@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://d15xdgxq8skyq"]
+
+[node name="Bullet" type="Area2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(0, -50, -20, -30, -30, -30, -30, -20, -50, 0, -30, 20, -30, 30, -20, 30, 0, 50, 20, 30, 30, 30, 30, 20, 50, 0, 30, -20, 30, -30, 20, -30)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, -50, -50, 0, 0, 50, 50, 0)

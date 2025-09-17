@@ -1,0 +1,10 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cycqqrmb6ya6w"]
+
+[ext_resource type="FontFile" uid="uid://by3bpe1d4kglu" path="res://UIs/Asimovian-Regular.ttf" id="1_8xbjq"]
+
+[resource]
+font = ExtResource("1_8xbjq")
+font_size = 60
+font_color = Color(1, 1, 1, 0.5019608)
+outline_size = 7
+outline_color = Color(0.5019608, 0.5019608, 0.5019608, 1)

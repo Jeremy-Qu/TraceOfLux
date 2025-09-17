@@ -1,0 +1,112 @@
+[gd_scene load_steps=5 format=3 uid="uid://cbe1ljmhkv464"]
+
+[ext_resource type="Script" uid="uid://41uddrlv1vlf" path="res://LevelObjects/goal.gd" id="1_py4ba"]
+
+[sub_resource type="Animation" id="Animation_8bxbv"]
+resource_name = "AnimOutline"
+length = 2.0
+loop_mode = 1
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GoalShape/GoalOutline:points")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [PackedVector2Array(0, -35, -35, 0, 0, 35, 35, 0), PackedVector2Array(0, -45, -45, 0, 0, 45, 45, 0), PackedVector2Array(0, -35, -35, 0, 0, 35, 35, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GoalShape/GoalOutline:width")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(-2, -2, -2),
+"update": 0,
+"values": [3.0, 6.0, 3.0]
+}
+
+[sub_resource type="Animation" id="Animation_8bswv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GoalShape/GoalOutline:points")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [PackedVector2Array(0, -40, -40, 0, 0, 40, 40, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("GoalShape/GoalOutline:width")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [3.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cbw2f"]
+_data = {
+&"AnimOutline": SubResource("Animation_8bxbv"),
+&"RESET": SubResource("Animation_8bswv")
+}
+
+[node name="Goal" type="Area2D"]
+script = ExtResource("1_py4ba")
+
+[node name="AnimGoal" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_cbw2f")
+}
+autoplay = "AnimOutline"
+
+[node name="GoalShape" type="Node2D" parent="."]
+
+[node name="GoalPoint" type="Polygon2D" parent="GoalShape"]
+polygon = PackedVector2Array(0, -30, -30, 0, 0, 30, 30, 0)
+uv = PackedVector2Array(18, -37, -8, -1, 35, 17, 54, -4)
+
+[node name="GoalOutline" type="Line2D" parent="GoalShape"]
+points = PackedVector2Array(0, -40, -40, 0, 0, 40, 40, 0)
+closed = true
+width = 3.0
+default_color = Color(1, 1, 1, 0.5019608)
+
+[node name="GoalButton" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -40.0
+offset_right = 40.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.7853982
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(40, 40)
+metadata/_edit_use_anchors_ = true
+
+[node name="GoalCollision" type="CollisionPolygon2D" parent="."]
+position = Vector2(-160, 10)
+polygon = PackedVector2Array(160, -40, 130, -10, 160, 20, 190, -10)
+
+[connection signal="pressed" from="GoalButton" to="." method="_on_goal_button_pressed"]

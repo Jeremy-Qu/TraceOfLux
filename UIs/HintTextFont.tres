@@ -1,0 +1,13 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://dttegpsyi34uo"]
+
+[ext_resource type="FontFile" uid="uid://by3bpe1d4kglu" path="res://UIs/Asimovian-Regular.ttf" id="1_vyy7g"]
+
+[resource]
+line_spacing = 0.0
+font = ExtResource("1_vyy7g")
+font_size = 40
+font_color = Color(0.92156863, 0.92156863, 0.92156863, 0.7529412)
+outline_color = Color(0, 0, 0, 0.5019608)
+shadow_size = 5
+shadow_color = Color(1, 1, 1, 0.2509804)
+shadow_offset = Vector2(0, 0)
